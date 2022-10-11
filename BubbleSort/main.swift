@@ -1,23 +1,20 @@
-// ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩  ⇩
-// DO NOT ALTER THE TEXT BETWEEN THESE LINES =========={M{E{R{L{I{N{1}N}I}L}R}E}M}=====================================
-let unsortedIntegers = [5, 1, 4, 2, 8]
-// DO NOT ALTER THE TEXT BETWEEN THESE LINES =========={M{E{R{L{I{N{1}N}I}L}R}E}M}=====================================
-// ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧  ⇧
+var stdin : [String] = []
 
+while let line = readLine() {
+    stdin.append(line)
+}
 
-// Add your code below:
-
-func swap(integers: inout [Int], firstIndex: Int, secondIndex: Int) {
+func swap(integers: inout [String], firstIndex: Int, secondIndex: Int) {
     integers.swapAt(firstIndex, secondIndex)
 }
 
-func bubbleSort(unsortedIntegers: [Int]) -> [Int] {
+func bubbleSort(unsortedIntegers: [String]) -> [String] {
     var sortingIntegers = unsortedIntegers
     var passCount = 0
     var totalSwapCount = 0
     var swapsThisPass = 0
 
-    print("Pass: \(passCount), Swaps: \(swapsThisPass)/\(totalSwapCount), Array: \(sortingIntegers) ")
+    //print("Pass: \(passCount), Swaps: \(swapsThisPass)/\(totalSwapCount), Array: \(sortingIntegers) ")
     
     repeat {
         swapsThisPass = 0
@@ -37,11 +34,11 @@ func bubbleSort(unsortedIntegers: [Int]) -> [Int] {
         }
         passCount += 1
 
-        print("Pass: \(passCount), Swaps: \(swapsThisPass)/\(totalSwapCount), Array: \(sortingIntegers) ")
-        
+        //print("Pass: \(passCount), Swaps: \(swapsThisPass)/\(totalSwapCount), Array: \(sortingIntegers) ")
+        print("pass: \(passCount)")
         } while swapsThisPass != 0
 
         return sortingIntegers
 }
 
-let sortedIntegers = bubbleSort(unsortedIntegers: unsortedIntegers)
+let sortedIntegers = bubbleSort(unsortedIntegers: stdin)
