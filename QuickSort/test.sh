@@ -8,7 +8,7 @@ do
     for run in {0..4}
     do
 	TIMEFORMAT=%R
-	time cat ../Words/$file.txt | swift main.swift > /dev/null > output.txt
+	time cat ../Words/$file.txt | swift main.swift > /dev/null
     done
 done
 
